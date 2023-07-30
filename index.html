@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/icon.png">    
+                                
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="principal">
+            <div class="topo">
+
+                <div class="bola">
+                    <div class="bolaDeDentro"></div>
+                </div>
+                <div class="bolaMenorPai">
+                    <div id="bolaVermelha" class="bolaMenor">
+                        <div id="bolinhaVermelha" class="bolaMenorDentro"></div>
+                    </div>
+                    <div id="bolaAmarela" class="bolaMenor">
+                        <div id="bolinhaAmarela" class="bolaMenorDentro"></div>
+                    </div>
+                    <div id="bolaVerde" class="bolaMenor">
+                        <div id="bolinhaVerde" class="bolaMenorDentro"></div>
+                    </div>
+                </div>
+            </div>
+            <svg height="100" width="500" class="left-svg">
+                <polyline points="0,75 138,75 158,40 500,35" style="fill: none; stroke: black; stroke-width: 3">
+                </polyline>
+            </svg>
+
+            <div class="screen-container">
+                <div class="screen">
+                    <div class="top-screen-lights">
+                        <div class="mini-light"></div>
+                        <div class="mini-light"></div>
+                    </div>
+                    <div class="main-screen">
+ 
+                    </div>
+                    <div class="bottom-screen-lights">
+                        <div class="small-light">
+                        </div>
+                        <div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bottom-container">
+              <div>
+                <div class="bola-bottom-container">
+                    <div class="bola-bottom-container-inside">
+                    </div>
+                </div>
+              </div>
+
+              <div class="pesquisar-container">
+                    <div class="luzes">
+                        <div class="luz"></div>
+                        <div class="luz"></div>
+                    </div>
+                    <div  class="pesquisar">
+                        <input type="text" id="txtBusca" placeholder="search..."/>
+                    </div>
+              </div>
+              <div class="botoes">
+                
+                    <div class="botaoVertical">   <div class="botaoVerticalInside"></div> </div>
+                    <div class="botaoHorizontal"> <div class="botaoHorizontalInside"></div> </div>
+              </div>
+            </div>
+
+            <div class="central-cylinder">
+                <div class="central-cylinder-block"></div>
+            </div>
+        </div>
+
+
+
+        <div class="secundaria aberta" id="divSecundaria" onclick="abrirFechar()">
+            <div class="empty-container">
+                <svg height="100" width="500" class="right-svg">
+                    <polyline class="polyline-abrir" points="500,75 362,75 342,40 0,40 0,0 500,0 500,75"
+                        style="fill: #FFE18D; stroke: none; stroke-width: 3;"></polyline>
+                    <polyline class="polyline-fechar" points="500,75 362,75 342,40 0,40"
+                        style="fill: none; stroke: black; stroke-width: 3;">
+                    </polyline>
+                </svg>
+
+            </div>
+            <div id="teste">
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
