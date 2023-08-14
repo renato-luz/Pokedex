@@ -16,7 +16,7 @@ const getPokemonData = (pokemon) => {
           let types = data.types.map(typeObj => typeObj.type.name); // Extrai os nomes dos tipos
           typeScreen.innerHTML = "Type: " + types.join(", ");
           let abilities = data.abilities.map(typeObj => typeObj.ability.name);
-          abilitiesScreen.innerHTML = "Habilidades: " + abilities.join(", ")
+          abilitiesScreen.innerHTML = "Abilities: " + abilities.join(", ")
           //idScreen.innerHTML = `#${data.id}`;
 
           inputField.value = '';
