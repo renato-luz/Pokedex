@@ -91,7 +91,8 @@ polyline{background-color: var(--background);}
   align-items: center; 
 }
 
-#abilities{
+#abilitiesInfo{
+  
   color: white;
   display: flex;
   justify-content: center;
@@ -104,6 +105,25 @@ polyline{background-color: var(--background);}
   background: rgba(38, 36, 36, 0.85);
 
 }
+
+#randomButton {
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block;
+  margin: 10px auto;
+  
+}
+
+#randomButton:hover {
+  background-color: #2980b9;
+}
+
 
 .grid-item {
   background-color: #00d9fb;

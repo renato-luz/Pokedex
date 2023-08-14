@@ -3,7 +3,14 @@
 const imageScreen = document.querySelector('.main-screen'); // Seleciona o elemento com a classe 'main-screen'
 const nameScreen = document.querySelector('#nome');
 const typeScreen = document.querySelector('#info');
-const abilitiesScreen = document.querySelector('#abilities');
+const abilitiesScreen = document.querySelector('#abilitiesInfo');
+const randomButton = document.querySelector('#randomButton');
+
+randomButton.addEventListener("click", () => {
+  const randomId = Math.floor(Math.random() * 1000) + 1; // Gera um número aleatório entre 1 e 1000
+  getPokemonData(randomId); // Chama a função com o número gerado
+});
+
 
 const getPokemonData = (pokemon) => {
   console.log(pokemon);
