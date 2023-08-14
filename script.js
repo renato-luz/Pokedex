@@ -1,35 +1,9 @@
-function abrirFechar() {
-  // Seleciona a div secundária pelo ID
-  const divSecundaria = document.getElementById("divSecundaria");
 
-  // Verifica se a div secundária possui a classe "fechar"
-  if (divSecundaria.classList.contains("fechar")) {
-    // Remove a classe "fechar" e adiciona a classe "abrir"
-    divSecundaria.classList.remove("fechar");
-    divSecundaria.classList.add("abrir");
-  } else {
-    // Remove a classe "abrir" e adiciona a classe "fechar"
-    divSecundaria.classList.remove("abrir");
-    divSecundaria.classList.add("fechar");
-  }
-
-  // Seleciona as polylines pelos seletores
-  const polylineAbrir = document.querySelector(".polyline-abrir");
-  const polylineFechar = document.querySelector(".polyline-fechar");
-
-  setTimeout(() => {
-    // Alterna o fill de acordo com o estado atual
-    if (polylineAbrir.style.fill === "rgb(220, 10, 45)") {
-      polylineAbrir.style.fill = "#FFE18D";
-      polylineFechar.style.fill = "none";
-    } else {
-      polylineAbrir.style.fill = "rgb(220, 10, 45)";
-      polylineFechar.style.fill = "none";
-    }
-  }, 490);
-}
 
 const imageScreen = document.querySelector('.main-screen'); // Seleciona o elemento com a classe 'main-screen'
+const nameScreen = document.querySelector('#nome');
+const typeScreen = document.querySelector('#info');
+const abilitiesScreen = document.querySelector('#abilities');
 
 const getPokemonData = (pokemon) => {
   console.log(pokemon);
@@ -38,8 +12,11 @@ const getPokemonData = (pokemon) => {
       .then((data) => {
           const id = String(data.id).padStart(3, '0'); // Formata o ID com três dígitos preenchidos com zeros à esquerda
           imageScreen.style.backgroundImage = `url('https://assets.pokemon.com/assets/cms2/img/pokedex/full/${id}.png')`;
-          //nameScreen.innerHTML = data.name;
-          //typeScreen.innerHTML = data.types[0].type.name;
+          nameScreen.innerHTML = data.name + " -  id : " + data.id;
+          let types = data.types.map(typeObj => typeObj.type.name); // Extrai os nomes dos tipos
+          typeScreen.innerHTML = "Type: " + types.join(", ");
+          let abilities = data.abilities.map(typeObj => typeObj.ability.name);
+          abilitiesScreen.innerHTML = "Habilidades: " + abilities.join(", ")
           //idScreen.innerHTML = `#${data.id}`;
 
           inputField.value = '';

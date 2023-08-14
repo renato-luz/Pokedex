@@ -14,12 +14,14 @@
   --bolinha-verde: #b8e757;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 20px;
-  font-family: 'Yapix', sans-serif;                             
+  font-size: 24px;
+  font-family: 'Amatic SC', cursive;                            
 }
 
 .container {
@@ -69,6 +71,57 @@ polyline{background-color: var(--background);}
   border-right: 5px solid var(--black);
   position: absolute;
   bottom: 0;
+}
+
+#nome{
+  text-align: center;
+  padding-top: 5px;
+}
+
+#divInfo{
+  width: 400px;
+  height: 60px;
+  margin: auto auto;
+  margin-top: 4rem;
+  background: rgba(38, 36, 36, 0.85);
+  color: white;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+#abilities{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 400px;
+  height: 100px;
+  margin: auto auto;
+  border: 1px solid black;
+  margin-top: 3rem;
+  background: rgba(38, 36, 36, 0.85);
+
+}
+
+.grid-item {
+  background-color: #00d9fb;
+  border-radius: 5%;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+
+}
+
+
+#botoesAzuis{
+  display: grid;
+  gap: 0.3%;
+  grid-template-columns: auto auto auto auto auto;
+  width: 400px;
+  height: 100px;
+  margin: auto auto;
+  margin-top: 5%;
 }
 
 .secundaria {
@@ -176,6 +229,9 @@ polyline{background-color: var(--background);}
   background-color: var(--sombra);
 }
 
+.pesquisar-container{
+  padding-bottom: 1.5rem;
+}
 
 
 .mini-light {
@@ -187,16 +243,25 @@ polyline{background-color: var(--background);}
   background-color: var(--red);
 }
 
-.main-screen{
+#ada{
   height: 100%;
   width: 80%;
+  justify-self: center;
+  background-image: url(images/background.jpg);
+  z-index: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-screen{
+  height: 100%;
+  width: 100%;
   border: 1px solid var(--black);
   justify-self: center;
-  background: rgba(38, 36, 36, 0.95);
+ /* background: rgba(38, 36, 36, 0.75); */
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(16.2px);
-  -webkit-backdrop-filter: blur(16.2px);
   background-image: url(https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png);
   background-size: contain;
   background-repeat: no-repeat;

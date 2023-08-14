@@ -13,8 +13,8 @@ I developed this Pokedex application as a personal project to improve my skills 
 
 ## To-Do List 📋
 
-1. Display More Pokemon Information
-2. Apply final touches to CSS styling.
+1. Display More Pokemon Information ✅
+2. Apply final touches to CSS styling. ✅
 3. Add a "Random Pokemon" button
 
 ## Technologies Used 🖥️
